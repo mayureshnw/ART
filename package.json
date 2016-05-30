@@ -1,0 +1,20 @@
+{
+  "name": "ART",
+  "version": "1.0.0",
+  "description": "Comparative testing for refactored API's returning JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mnw2212/ART.git"
+  },
+  "keywords": [],
+  "author": "Mayuresh Waykole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mnw2212/ART/issues"
+  },
+  "homepage": "https://github.com/Mnw2212/ART#readme"
+}
