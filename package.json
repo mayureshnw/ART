@@ -19,5 +19,9 @@
   "homepage": "https://github.com/Mnw2212/ART#readme",
   "devDependencies": {
     "babel-core": "^6.9.1"
+  },
+  "dependencies": {
+    "deep-diff": "^0.3.4",
+    "lodash": "^4.13.1"
   }
 }
