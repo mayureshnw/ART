@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Mnw2212/ART/issues"
   },
-  "homepage": "https://github.com/Mnw2212/ART#readme"
+  "homepage": "https://github.com/Mnw2212/ART#readme",
+  "devDependencies": {
+    "babel-core": "^6.9.1"
+  }
 }
