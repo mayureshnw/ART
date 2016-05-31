@@ -1,14 +1,11 @@
 'use strict';
 
-const productionData = require('../mock/production.json');
-const productionData2 = require('../mock/production2.json');
-const stagingData = require('../mock/staging.json');
 var diff = require('deep-diff').diff;
 var _ = require('lodash');
 
-const productionObjectAfterComparison = (productionData, productionData2) => {
+const productionObjectAfterComparison = (data1, data2) => {
     let pathToRemoveKeys = [];
-    const differenceArray = diff(productionData, productionData2);
+    const differenceArray = diff(data1, data2);
     if (differenceArray) {
         _.forEach(differenceArray, (value) => {
             pathToRemoveKeys.push(value.path);
@@ -25,6 +22,7 @@ const stagingProductionComparison = (stagingData, productionData, keysToIgnore) 
     return _.isEqual(stagingData, productionData);
 }
 
-const productionObject = productionObjectAfterComparison(productionData, productionData2);
-
-const comparisonResult = stagingProductionComparison(stagingData, productionData, productionObject);
+const refactorResult = (stagingData, productionData, productionData2) => {
+    const volatileKeys = productionObjectAfterComparison(productionData, productionData2);
+    return stagingProductionComparison(stagingData, productionData, volatileKeys);
+}
